@@ -1,0 +1,15 @@
+VERSION 0.8
+
+FROM node:lts-slim
+COPY . /app
+WORKDIR /app
+install:
+    RUN npm install
+    SAVE ARTIFACT node_modules AS LOCAL node_modules
+
+build:
+    RUN npm run build
+    SAVE ARTIFACT dist AS LOCAL dist
+
+lint:
+    RUN npm run lint

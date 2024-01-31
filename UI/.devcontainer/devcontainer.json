@@ -1,0 +1,4 @@
+{
+    "image": "node:lts-slim",
+    "forwardPorts": [3000]
+}
